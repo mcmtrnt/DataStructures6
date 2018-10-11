@@ -88,12 +88,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\MyCss.css" />
     <Content Include="Global.asax" />
+    <Content Include="Graphics\husky.jpg" />
+    <Content Include="Scripts\MyJS.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DictionaryController.cs" />
+    <Compile Include="Controllers\ExitController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\QueueController.cs" />
+    <Compile Include="Controllers\StackController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -103,6 +110,9 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Index\IndexStack.cshtml" />
+    <Content Include="Views\Stack\Index.cshtml" />
+    <Content Include="Views\Queue\Index.cshtml" />
+    <Content Include="Views\Dictionary\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +123,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Exit\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
