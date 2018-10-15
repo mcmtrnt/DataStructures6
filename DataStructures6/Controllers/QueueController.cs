@@ -14,7 +14,7 @@ namespace DataStructures5.Controllers
         {
             return View();
         }
-
+        //This method will add one to the Queue
         public ActionResult AddOne()
         {
             int i = myQueue.Count + 1;  //figure out how many items are in the queue
@@ -23,7 +23,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method will add a list of 2000 items to the Queue
         public ActionResult AddHugeList()
         {
             myQueue.Clear();  //first clear the queue
@@ -35,7 +35,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method will display what is in the Queue
         public ActionResult Display()
         {
             if (myQueue.Count >= 1)
@@ -54,7 +54,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method will delete an item from the Queue
         public ActionResult Delete()
         {
             if (myQueue.Count >= 1)
@@ -69,14 +69,14 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method will clear the contents of the Queue
         public ActionResult Clear()
         {
             myQueue.Clear();
 
             return View("Index");
         }
-
+        //This method will search the Queue
         public ActionResult Search()
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
