@@ -14,7 +14,7 @@ namespace DataStructures5.Controllers
         {
             return View();
         }
-
+        //This method adds one item to the dictionary
         public ActionResult AddOne()
         {
             int i = myDictionary.Count + 1; //figure out how many items are in the dictionary
@@ -23,7 +23,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method adds a list of 2000 items to the dictionary
         public ActionResult AddHugeList()
         {
             myDictionary.Clear(); //first clear the dictionary
@@ -35,15 +35,15 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method displays what is in the dictionary
         public ActionResult Display()
         {
             if (myDictionary.Count >= 1)
             {
                 ViewBag.MyDictionary += "<ul>";
-                foreach (var item in myDictionary)
+                foreach (KeyValuePair<string, int> item in myDictionary)
                 {
-                    ViewBag.MyDictionary += "<li>" + item + "</li>";
+                    ViewBag.MyDictionary += "<li>" + item.Key + "</li>";
                 }
                 ViewBag.MyDictionary += "</ul>";
             }
@@ -54,7 +54,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method delets an item from the dictionary
         public ActionResult Delete()
         {
             if (myDictionary.Count >= 1)
@@ -72,14 +72,14 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        //This method clears what is in the dictionary
         public ActionResult Clear()
         {
             myDictionary.Clear();
 
             return View("Index");
         }
-
+        //This method searches the dictionary for a key and its value
         public ActionResult Search()
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
