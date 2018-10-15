@@ -41,9 +41,9 @@ namespace DataStructures5.Controllers
             if (myDictionary.Count >= 1)
             {
                 ViewBag.MyDictionary += "<ul>";
-                foreach (var item in myDictionary)
+                foreach (KeyValuePair<string, int> item in myDictionary)
                 {
-                    ViewBag.MyDictionary += "<li>" + item + "</li>";
+                    ViewBag.MyDictionary += "<li>" + item.Key + "</li>";
                 }
                 ViewBag.MyDictionary += "</ul>";
             }
