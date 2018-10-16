@@ -16,6 +16,7 @@ namespace DataStructures5.Controllers
             return View();
         }
 
+        // this method adds one item to the stack
         public ActionResult AddOne()
         {
             int i = myStack.Count + 1; //figure out how many items are in the queue
@@ -24,7 +25,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        // this method adds a list of 2000 to the stack
         public ActionResult AddHugeList()
         {
             myStack.Clear();  //first clear the stack
@@ -36,7 +37,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        // this method displays what is in the stack
         public ActionResult Display()
         {
             if (myStack.Count >= 1)
@@ -55,7 +56,7 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        // this method deletes an item stack
         public ActionResult Delete()
         {
             if (myStack.Count >= 1)
@@ -71,14 +72,14 @@ namespace DataStructures5.Controllers
 
             return View("Index");
         }
-
+        // this method clears the stack
         public ActionResult Clear()
         {
             myStack.Clear();
 
             return View("Index");
         }
-
+        // this method searches the stack
         public ActionResult Search()
         {
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
